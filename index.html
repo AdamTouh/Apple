@@ -4,12 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Expert Apple pour PME/TPE : solutions clé en main, audit gratuit, installation et support. Contactez-nous." />
-  <title>Adam TOUHAMI - Expert Apple pour PME</title>
+  <title>Expert Apple pour PME - Adam TOUHAMI</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
@@ -19,26 +15,15 @@
     }
     header {
       background: #f2f2f2;
-      color: #000;
-      padding: 2rem;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+      padding: 2rem;
     }
     nav {
       display: flex;
       justify-content: center;
+      gap: 1rem;
       background: #e0e0e0;
       padding: 1rem;
-      gap: 1rem;
-      flex-wrap: wrap;
     }
     nav button {
       background: #0071e3;
@@ -47,197 +32,97 @@
       padding: 0.7rem 1.5rem;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease, transform 0.1s ease;
-    }
-    nav button:hover {
-      background: #005bb5;
-    }
-    nav button:active {
-      transform: scale(0.98);
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
+      padding: 2rem;
     }
     .service {
       background: #f9f9f9;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 14px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
-      user-select: none;
-    }
-    .service:hover {
-      box-shadow: 0 4px 10px rgba(0, 113, 227, 0.3);
-      transform: translateY(-4px);
-    }
-    .service h2 {
-      margin-top: 0;
-      color: #000;
-      font-weight: 500;
-    }
-    footer {
-      background: #f2f2f2;
-      color: #666;
-      text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-    label {
+    #contact-form {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #contact-form.show {
       display: block;
-      margin-bottom: 0.3rem;
-      font-weight: 500;
-      color: #333;
+      opacity: 1;
     }
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 0.75rem;
-      margin: 0.5rem 0 1rem;
+      margin-bottom: 1rem;
       border-radius: 8px;
       border: 1px solid #ccc;
-      font-size: 1rem;
-      resize: vertical;
-      max-width: 100%;
       box-sizing: border-box;
     }
     button[type="submit"] {
-      padding: 1rem 2rem;
-      background: #0071e3;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease, transform 0.1s ease;
-    }
-    button[type="submit"]:hover {
-      background: #005bb5;
-    }
-    button[type="submit"]:active {
-      transform: scale(0.98);
-    }
-    .contact-options {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-    .whatsapp,
-    .form-link {
-      margin-top: 2rem;
-      display: inline-block;
-    }
-    .form-link a {
       background: #0071e3;
       color: white;
+      border: none;
       padding: 1rem 2rem;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      display: inline-block;
-      transition: background 0.3s ease;
+      cursor: pointer;
     }
-    .form-link a:hover {
-      background: #005bb5;
-    }
-    .whatsapp a {
-      background: #25d366;
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-    .whatsapp a:hover {
-      background: #1ebe57;
-    }
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header {
-        padding: 1rem;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .service {
-        padding: 1rem;
-      }
-    }
-    /* Hide contact form by default */
-    #contact-form {
+    #confirmation-message {
       display: none;
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      background: #f2f2f2;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Adam TOUHAMI - Expert Apple pour PME/TPE</h1>
+    <h1>Expert Apple pour PME/TPE - Adam TOUHAMI</h1>
     <p>Solutions simples, clé en main pour les entreprises</p>
   </header>
 
   <nav>
-    <a href="#contact-form" onclick="toggleForm()"><button>📩 Formulaire</button></a>
-    <a href="https://wa.me/33612345678" target="_blank" rel="noopener"><button>💬 WhatsApp</button></a>
+    <button onclick="showForm()">📩 Formulaire</button>
+    <a href="https://wa.me/33612345678" target="_blank"><button>💬 WhatsApp</button></a>
   </nav>
 
   <section>
-    <div class="service" tabindex="0" aria-label="Audit gratuit de vos besoins" onmouseenter="vibrate()" onfocus="vibrate()">
-      <h2>🔍 Audit gratuit de vos besoins</h2>
-      <p>Un premier échange offert pour comprendre votre environnement, vos usages et proposer une solution adaptée.</p>
+    <div class="service">
+      <h2>🔍 Audit gratuit</h2>
+      <p>Analyse de vos besoins pour une solution Apple sur mesure.</p>
     </div>
-
-    <div class="service" tabindex="0" aria-label="Installation et mise en route" onmouseenter="vibrate()" onfocus="vibrate()">
-      <h2>🔧 Installation et mise en route</h2>
-      <p>On vous livre vos appareils Apple prêts à l'emploi, avec les réglages et applications déjà installés.</p>
+    <div class="service">
+      <h2>🔧 Installation</h2>
+      <p>Configuration complète de vos appareils Apple.</p>
     </div>
-
-    <div class="service" tabindex="0" aria-label="Suivi et assistance" onmouseenter="vibrate()" onfocus="vibrate()">
-      <h2>💼 Suivi et assistance</h2>
-      <p>Besoin d’aide ou d’un conseil ? On vous accompagne pendant 30 jours après la livraison, et plus si besoin.</p>
+    <div class="service">
+      <h2>💼 Suivi</h2>
+      <p>Assistance pendant 30 jours après installation.</p>
     </div>
-
-    <div class="service" tabindex="0" aria-label="Offre clé en main" onmouseenter="vibrate()" onfocus="vibrate()">
-      <h2>📦 Offre clé en main</h2>
-      <p>Vous choisissez vos appareils, nous nous occupons du reste : commande, configuration et livraison.</p>
+    <div class="service">
+      <h2>📦 Clé en main</h2>
+      <p>Commande, configuration et livraison incluses.</p>
     </div>
 
     <div id="contact-form">
-      <form action="https://formspree.io/f/xjkrrdko" method="POST">
+      <form onsubmit="submitForm(event)">
         <h2>📩 Contactez-nous</h2>
-        <label for="name">Votre nom</label>
-        <input id="name" type="text" name="name" placeholder="Votre nom" required />
-        <label for="email">Votre email</label>
-        <input id="email" type="email" name="email" placeholder="Votre email" required />
-        <label for="message">Décrivez votre besoin...</label>
-        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
         <button type="submit">Envoyer</button>
+        <div id="confirmation-message">✅ Message envoyé avec succès !</div>
       </form>
-    </div>
-
-    <div class="contact-options">
-      <div class="form-link">
-        <a href="#contact-form" onclick="toggleForm()">📩 Formulaire</a>
-      </div>
-      <div class="whatsapp">
-        <a href="https://wa.me/33612345678" target="_blank" rel="noopener">💬 WhatsApp</a>
-      </div>
     </div>
   </section>
 
@@ -246,18 +131,14 @@
   </footer>
 
   <script>
-    function vibrate() {
-      if (navigator.vibrate) {
-        navigator.vibrate(15);
-      }
+    function showForm() {
+      document.getElementById('contact-form').classList.add('show');
     }
-    function toggleForm() {
-      var form = document.getElementById('contact-form');
-      if (form.style.display === 'none' || form.style.display === '') {
-        form.style.display = 'block';
-      } else {
-        form.style.display = 'none';
-      }
+
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('confirmation-message').style.display = 'block';
+      event.target.reset();
     }
   </script>
 </body>
